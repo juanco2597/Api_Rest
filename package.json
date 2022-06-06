@@ -1,0 +1,26 @@
+{
+  "name": "api_rest",
+  "version": "1.0.0",
+  "description": "Proyecto de MEAN Stack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanco2597/Api_Rest.git"
+  },
+  "author": "Juan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanco2597/Api_Rest/issues"
+  },
+  "homepage": "https://github.com/juanco2597/Api_Rest#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
