@@ -1,9 +1,19 @@
 const express = require('express');
-const app = express()
 
+const conexionDB = require("./db/config");
+const authRouter = require("./routes/auth");
+
+const app = express();
+require("dotenv").config();
+
+conexionDB();
+
+app.use(express.json());
 
 app.use("/", express.static(__dirname + "/public"));
+app.use("/auth", authRouter);
 
-app.listen(3000,()=>{
-    console.log("Aplicacion corriendo en el puerto 3000");
+
+app.listen(process.env.PORT,()=>{
+    console.log(`Aplicacion corriendo en el puerto ${process.env.PORT}`);
 })
