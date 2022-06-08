@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const conexionDB = async () => {
+const conect = async () => {
     
     try {
         await mongoose.connect(
-            "mongodb+srv://juan:pantera@cluster0.qb9imkx.mongodb.net/crud?retryWrites=true&w=majority"); 
+            'mongodb+srv://juan:pantera@cluster0.qb9imkx.mongodb.net/crud?retryWrites=true&w=majority'); 
 
         console.log("Conectado a la DB");
     }
@@ -15,4 +15,4 @@ const conexionDB = async () => {
     
 }
 
-module.exports = conexionDB;
+module.exports = conect;
