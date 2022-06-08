@@ -1,5 +1,6 @@
 const express = require('express');
-const conect = require('./db/config');
+const conexionDB = require('./db/config');
+
 
 const authRouter = require("./routes/auth");
 
@@ -7,7 +8,7 @@ const app = express();
 require("dotenv").config();
 
 
-conect();
+conexionDB();
 
 app.use(express.json());
 
